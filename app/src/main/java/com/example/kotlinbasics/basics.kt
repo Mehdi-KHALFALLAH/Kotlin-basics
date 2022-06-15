@@ -34,7 +34,15 @@ println("hello " + result )
         is Double -> println("$x is a String")
         else -> println("$x is a none ")
     }
+    var result2 = add(5,6)
+    println("result is $result2")
+    println(result2)
     }
+fun add( a : Int, b : Int) : Int {
+
+ return (a +b)
+
+}
 
 
 
