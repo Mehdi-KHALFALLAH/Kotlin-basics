@@ -37,19 +37,10 @@ println("hello " + result )
     var result2 = add(5,6)
     println("result is $result2")
     println(result2)
-    var denis = Person("Mehdi", "Khalfallah")
-
     }
 fun add( a : Int, b : Int) : Int {
+
  return (a +b)
-
-}
-
-class Person(firstName : String, lastName : String ="Doe") {
-    init {
-        println("my first name is ${firstName}")
-        println("my last name is ${lastName}")
-    }
 
 }
 
