@@ -3,19 +3,28 @@ package com.example.kotlinbasics
 data class User(val id : Long, var name : String)
 
 
+
+
+
 fun main () {
 
     val user1 = User(1, "Mehdi")
-    val name = user1.name
-    println(name)
+
+
     user1.name = "Mechael"
-    println(  user1.name)
+    println(user1.name)
     val user2 = User(1,"Mechael")
     println(user1 == user2)
+    val updateUser = user1.copy(name="Denis Panjuta")
+    println(user1.name)
+    println(updateUser.name)
+    println(updateUser.component1())
+    println(updateUser.component2())
+    val (id,name) = updateUser
+    println("id is ${id} and name ${name}")
 
-    var myCar = car()
-    myCar.owner
-    println(myCar.owner)
+
+
     //TODO : add new functionnality
 var denis = Person("Mehdi","Khalfallah" ,31)
     denis.stateHobby()
@@ -55,13 +64,6 @@ println("hello " + result )
     }
 
     }
-class car() {
-    lateinit var owner : String
-    val  myBrand : String = "BMW"
-    init {
-        this.owner = "mehdi"
-    }
-}
 
 class Person (firstName : String = "john", lastName : String = "Doe") {
     var age : Int? = null
